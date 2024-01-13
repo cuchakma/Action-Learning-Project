@@ -1,0 +1,16 @@
+name: Unit Test
+on: push
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get code #name of the job
+        uses: actions/checkout@v3 #action required under the job e.g: Like third party market app or custom command
+      - name: Install NodeJS #name of the job
+        uses: actions/setup-node@v3 #action required under the job e.g: Like third party market app or custom command
+        with:
+          node-version:18 #subcommand available under actions/setup-node@v3 in the marketplace
+      - name: Install Dependencies  #name of the job
+        run: npm install #command line
+      - name: Run Test #name of the command
+        run: npm test #command line

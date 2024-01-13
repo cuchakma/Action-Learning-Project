@@ -9,7 +9,7 @@ jobs:
       - name: Install NodeJS #name of the job
         uses: actions/setup-node@v3 #action required under the job e.g: Like third party market app or custom command
         with:
-          node-version:18 #subcommand available under actions/setup-node@v3 in the marketplace
+          node-version: 18 #subcommand available under actions/setup-node@v3 in the marketplace
       - name: Install Dependencies  #name of the job
         run: npm install #command line
       - name: Run Test #name of the command
